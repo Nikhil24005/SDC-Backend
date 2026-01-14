@@ -3,10 +3,7 @@ import { config } from './config.js';
 
 export const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(config.database.uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const conn = await mongoose.connect(config.database.uri);
     
     console.log(`MongoDB Connected: ${conn.connection.host}`);
   } catch (error) {
