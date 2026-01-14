@@ -84,6 +84,32 @@ app.use('/api/public/testimonials', publicTestimonialRoutes);
 app.use('/api/public/gallery', publicGalleryRoutes);
 app.use('/api/public/contact', publicContactRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Welcome to SDC Backend API',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      public: {
+        people: '/api/public/people',
+        projects: '/api/public/projects',
+        testimonials: '/api/public/testimonials',
+        gallery: '/api/public/gallery',
+        contact: '/api/public/contact'
+      },
+      admin: {
+        people: '/api/admin/people',
+        projects: '/api/admin/projects',
+        testimonials: '/api/admin/testimonials',
+        gallery: '/api/admin/gallery'
+      }
+    }
+  });
+});
+
 // Health check route
 app.get('/api/health', (req, res) => {
   res.status(200).json({
