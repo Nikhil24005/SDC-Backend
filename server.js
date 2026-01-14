@@ -84,6 +84,13 @@ app.use('/api/public/testimonials', publicTestimonialRoutes);
 app.use('/api/public/gallery', publicGalleryRoutes);
 app.use('/api/public/contact', publicContactRoutes);
 
+// Route aliases for frontend compatibility (without /api prefix)
+app.use('/public/people', publicPeopleRoutes);
+app.use('/public/projects', publicProjectRoutes);
+app.use('/public/testimonials', publicTestimonialRoutes);
+app.use('/public/gallery', publicGalleryRoutes);
+app.use('/public/contact', publicContactRoutes);
+
 // Root route
 app.get('/', (req, res) => {
   res.status(200).json({
