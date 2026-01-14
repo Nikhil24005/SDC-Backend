@@ -92,11 +92,11 @@ const PartnersAndTeam = () => {
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-3">Backend Developers</h3>
-            <p className="text-sm font-mono text-gray-300">Devansh Solanki</p>
-            <p className="text-sm font-mono text-gray-300">Ayushi Choudhary</p>
+            <p className="text-sm font-mono text-gray-300">Nikhil Sharma</p>
+            {/* <p className="text-sm font-mono text-gray-300">Ayushi Choudhary</p>
             <p className="text-sm font-mono text-gray-300">Mayuresh Khedkar</p>
             <p className="text-sm font-mono text-gray-300">Anshika Kushwah</p>
-            <p className="text-sm font-mono text-gray-300">Devanshi Vyas</p>
+            <p className="text-sm font-mono text-gray-300">Devanshi Vyas</p> */}
           </div>
         </div>
       </section>
