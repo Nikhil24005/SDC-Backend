@@ -85,6 +85,11 @@ app.use('/api/public/gallery', publicGalleryRoutes);
 app.use('/api/public/contact', publicContactRoutes);
 
 // Route aliases for frontend compatibility (without /api prefix)
+app.use('/auth', authRoutes);
+app.use('/admin/people', adminPeopleRoutes);
+app.use('/admin/projects', adminProjectRoutes);
+app.use('/admin/testimonials', adminTestimonialRoutes);
+app.use('/admin/gallery', adminGalleryRoutes);
 app.use('/public/people', publicPeopleRoutes);
 app.use('/public/projects', publicProjectRoutes);
 app.use('/public/testimonials', publicTestimonialRoutes);
